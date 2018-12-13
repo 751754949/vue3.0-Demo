@@ -1,0 +1,65 @@
+.set-font(@fontSize:12px,@lineHeight:12px,@fontFamily:"\5FAE\8F6F\96C5\9ED1") {
+  font: @fontSize / @lineHeight  @fontFamily;
+}
+.set-border-radius(@radius:4px) {
+  -wekit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+.set-text-ellipsis() {
+  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.set-opacity(@num1:0.5,@num2:50) {
+  opacity: @num1;
+  filter: alpha(opacity= @num2); //filter 过滤器   兼容IE678
+}
+.set_cursor {
+  cursor: pointer;
+}
+/**
+dashboard 背景动画设置
+*/
+.set_scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  min-height: 180px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-moz-scrollbar {
+    display: none;
+  }
+  &::-o-scrollbar {
+    display: none;
+  }
+}
+.hide_scrollbar() {
+  /*滚动条 start*/
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    display: none;
+    background-color: transparent;
+  }
+}
+
+// 水平不换行
+.cont_nowrap(){
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+// 垂直居中
+.cont_vtc_mdl{
+  display: flex;
+  align-items: center;
+}
+
+.cont_hrzt_mdl{
+  display: flex;
+  justify-content: center;
+}
